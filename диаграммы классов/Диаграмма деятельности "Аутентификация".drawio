@@ -1,0 +1,105 @@
+<mxfile host="app.diagrams.net" modified="2023-10-18T12:00:00.000Z" agent="Mozilla/5.0" version="27.0.6">
+  <diagram name="Page-1" id="J3KCKedbq1iABVvFpygW">
+    <mxGraphModel dx="673" dy="1018" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <mxCell id="start" value="" style="ellipse;whiteSpace=wrap;html=1;shape=startState;" vertex="1" parent="1">
+          <mxGeometry x="100" y="200" width="30" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="login" value="Открыть форму входа" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="190" width="120" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="enter" value="Ввести логин/пароль" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="270" width="120" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="check" value="Проверить учетные данные" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="350" width="120" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="decision" value="Данные верны?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="450" width="80" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="menu" value="Открыть главное меню" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="550" width="120" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="error" value="Показать ошибку" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="450" width="120" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="attempt" value="Попытки &lt; 3?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="530" width="80" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="block" value="Блокировка на 5 мин" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="630" width="120" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="end" value="" style="ellipse;whiteSpace=wrap;html=1;shape=endState;" vertex="1" parent="1">
+          <mxGeometry x="130" y="650" width="30" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e1" value="" style="edgeStyle=none;curved=1;rounded=0;html=1;" edge="1" parent="1" source="start" target="login">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="e2" value="" style="edgeStyle=none;curved=1;rounded=0;html=1;" edge="1" parent="1" source="login" target="enter">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="e3" value="" style="edgeStyle=none;curved=1;rounded=0;html=1;" edge="1" parent="1" source="enter" target="check">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="e4" value="" style="edgeStyle=none;curved=1;rounded=0;html=1;" edge="1" parent="1" source="check" target="decision">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="e5" value="Да" style="edgeStyle=none;curved=1;rounded=0;html=1;" edge="1" parent="1" source="decision" target="menu">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="e6" value="Нет" style="edgeStyle=none;curved=1;rounded=0;html=1;" edge="1" parent="1" source="decision" target="error">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="e7" value="" style="edgeStyle=none;curved=1;rounded=0;html=1;" edge="1" parent="1" source="menu" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="e8" value="" style="edgeStyle=none;curved=1;rounded=0;html=1;" edge="1" parent="1" source="error" target="attempt">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="e9" value="Да" style="edgeStyle=none;curved=1;rounded=0;html=1;" edge="1" parent="1" source="attempt" target="enter">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="390" y="560" />
+              <mxPoint x="390" y="290" />
+              <mxPoint x="260" y="290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="e10" value="Нет" style="edgeStyle=none;curved=1;rounded=0;html=1;" edge="1" parent="1" source="attempt" target="block">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="e11" value="" style="edgeStyle=none;curved=1;rounded=0;html=1;" edge="1" parent="1" source="block" target="end">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="410" y="650" />
+              <mxPoint x="160" y="650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
