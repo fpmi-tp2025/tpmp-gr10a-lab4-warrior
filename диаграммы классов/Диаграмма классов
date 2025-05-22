@@ -1,0 +1,55 @@
+<mxfile host="app.diagrams.net" modified="2023-10-18T12:00:00.000Z" agent="Mozilla/5.0" version="27.0.6">
+  <diagram name="Page-1" id="J3KCKedbq1iABVvFpygW">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <mxCell id="Applicant" value="&lt;b&gt;Applicant&lt;/b&gt;&lt;br&gt;------------&lt;br&gt;- id: int&lt;br&gt;- last_name: string&lt;br&gt;- first_name: string&lt;br&gt;- middle_name: string&lt;br&gt;- gender: enum&lt;br&gt;- nationality: string&lt;br&gt;- birth_date: date&lt;br&gt;- address: json&lt;br&gt;- ct_scores: json&lt;br&gt;- passing_score: int&lt;br&gt;- vuz_id: int&lt;br&gt;------------&lt;br&gt;+ getFullName()&lt;br&gt;+ calculateAge()" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="200" width="200" height="250" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="Address" value="&lt;b&gt;Address&lt;/b&gt;&lt;br&gt;------------&lt;br&gt;- postal_code: string&lt;br&gt;- country: string&lt;br&gt;- region: string&lt;br&gt;- district: string&lt;br&gt;- city: string&lt;br&gt;- street: string&lt;br&gt;- house: string&lt;br&gt;- apartment: string" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="200" width="200" height="200" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="Vuz" value="&lt;b&gt;Vuz&lt;/b&gt;&lt;br&gt;------------&lt;br&gt;- id: int&lt;br&gt;- name: string&lt;br&gt;- description: text&lt;br&gt;------------&lt;br&gt;+ getApplicants()&lt;br&gt;+ getAverageScore()" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="500" width="200" height="180" as="geometry" />
+        </mxCell>
+
+        <mxCell id="CT_Scores" value="&lt;b&gt;CT_Scores&lt;/b&gt;&lt;br&gt;------------&lt;br&gt;- subject1: int&lt;br&gt;- subject2: int&lt;br&gt;- subject3: int&lt;br&gt;- total: int" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="450" width="200" height="150" as="geometry" />
+        </mxCell>
+
+        <mxCell id="rel1" value="" style="endArrow=open;endSize=8;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Applicant" target="Address">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="250" as="sourcePoint" />
+            <mxPoint x="450" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="rel2" value="" style="endArrow=open;endSize=8;html=1;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Applicant" target="CT_Scores">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="350" as="sourcePoint" />
+            <mxPoint x="450" y="525" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="rel3" value="1..*" style="endArrow=open;endSize=8;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Vuz" target="Applicant">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="300" y="680" as="sourcePoint" />
+            <mxPoint x="300" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="note1" value="Агрегация: Адрес является частью данных абитуриента" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="500" y="150" width="150" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="note2" value="Композиция: Результаты ЦТ не существуют без абитуриента" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="500" y="420" width="180" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
