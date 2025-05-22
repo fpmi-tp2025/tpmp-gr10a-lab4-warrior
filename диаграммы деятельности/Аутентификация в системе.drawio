@@ -1,0 +1,74 @@
+<mxfile host="app.diagrams.net" modified="2023-10-18T12:00:00.000Z" agent="Mozilla/5.0" version="27.0.6">
+  <diagram name="Page-1" id="J3KCKedbq1iABVvFpygW">
+    <mxGraphModel dx="673" dy="1018" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <mxCell id="start" value="" style="ellipse;whiteSpace=wrap;html=1;shape=startState;" vertex="1" parent="1">
+          <mxGeometry x="100" y="200" width="30" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="login" value="Вход в систему" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="190" width="120" height="40" as="geometry" />
+        </mxCell>
+        
+        
+        <mxCell id="check" value="Проверить учетные данные" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="290" width="120" height="40" as="geometry" />
+        </mxCell>
+        
+       
+        <mxCell id="decision" value="Данные верны?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="390" width="80" height="60" as="geometry" />
+        </mxCell>
+        
+        
+        <mxCell id="menu" value="Главное меню" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="500" width="120" height="40" as="geometry" />
+        </mxCell>
+        
+        
+        <mxCell id="error" value="Ошибка аутентификации" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="390" width="120" height="40" as="geometry" />
+        </mxCell>
+        
+   
+        <mxCell id="end" value="" style="ellipse;whiteSpace=wrap;html=1;shape=endState;" vertex="1" parent="1">
+          <mxGeometry x="130" y="600" width="30" height="30" as="geometry" />
+        </mxCell>
+        
+      
+        <mxCell id="e1" value="" style="edgeStyle=none;curved=1;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="start" target="login">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="e2" value="" style="edgeStyle=none;curved=1;rounded=0;html=1;" edge="1" parent="1" source="login" target="check">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="e3" value="" style="edgeStyle=none;curved=1;rounded=0;html=1;" edge="1" parent="1" source="check" target="decision">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="e4" value="Да" style="edgeStyle=none;curved=1;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="decision" target="menu">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="e5" value="Нет" style="edgeStyle=none;curved=1;rounded=0;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="decision" target="error">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="e6" value="" style="edgeStyle=none;curved=1;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="menu" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="e7" value="Повторить" style="edgeStyle=none;curved=1;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.25;entryY=0;" edge="1" parent="1" source="error" target="login">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="410" y="450" as="controlPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
