@@ -1,0 +1,96 @@
+<mxfile host="app.diagrams.net" modified="2023-10-18T12:00:00.000Z" agent="Mozilla/5.0" version="27.0.6">
+  <diagram name="Page-1" id="J3KCKedbq1iABVvFpygW">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="web" value="&lt;b&gt;Web-интерфейс&lt;/b&gt;&lt;br&gt;(React.js)" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="100" width="150" height="120" as="geometry" />
+        </mxCell>
+
+        <mxCell id="api" value="&lt;b&gt;API сервер&lt;/b&gt;&lt;br&gt;(Node.js/Express)" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="300" width="150" height="120" as="geometry" />
+        </mxCell>
+
+        <mxCell id="db" value="&lt;b&gt;База данных&lt;/b&gt;&lt;br&gt;(PostgreSQL)" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="500" width="150" height="120" as="geometry" />
+        </mxCell>
+
+        <mxCell id="auth" value="&lt;b&gt;Модуль аутентификации&lt;/b&gt;&lt;br&gt;(JWT)" style="shape=component;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="150" width="150" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="report" value="&lt;b&gt;Генератор отчетов&lt;/b&gt;&lt;br&gt;(PDF/Excel)" style="shape=component;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="350" width="150" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="lib" value="&lt;b&gt;Внешние библиотеки&lt;/b&gt;&lt;br&gt;- ORM (Sequelize)&lt;br&gt;- Validator" style="shape=package;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="500" width="150" height="100" as="geometry" />
+        </mxCell>
+
+        <mxCell id="docs" value="&lt;b&gt;Документация&lt;/b&gt;&lt;br&gt;- API (Swagger)&lt;br&gt;- Руководство пользователя" style="shape=folder;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="150" width="150" height="100" as="geometry" />
+        </mxCell>
+  
+        <mxCell id="config" value="&lt;b&gt;Конфигурации&lt;/b&gt;&lt;br&gt;- .env&lt;br&gt;- package.json" style="shape=folder;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="350" width="150" height="100" as="geometry" />
+        </mxCell>
+
+        <mxCell id="conn1" value="HTTP/REST" style="edgeStyle=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="web" target="api">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="conn2" value="SQL" style="edgeStyle=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="api" target="db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="conn3" value="" style="edgeStyle=none;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.3;entryDx=0;entryDy=0;" edge="1" parent="1" source="auth" target="api">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="conn4" value="" style="edgeStyle=none;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.7;entryDx=0;entryDy=0;" edge="1" parent="1" source="report" target="api">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="conn5" value="Зависимости" style="edgeStyle=none;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.8;entryDx=0;entryDy=0;" edge="1" parent="1" source="lib" target="api">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="conn6" value="Использует" style="edgeStyle=none;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="docs" target="web">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="775" y="250" as="sourcePoint" />
+            <mxPoint x="275" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="conn7" value="Конфигурация" style="edgeStyle=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="config" target="api">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="775" y="450" as="sourcePoint" />
+            <mxPoint x="275" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="int1" value="IReportService" style="shape=interface;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="int2" value="IAuthService" style="shape=interface;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="impl1" value="" style="edgeStyle=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="int1" target="report">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="impl2" value="" style="edgeStyle=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="int2" target="auth">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="note1" value="Система управления абитуриентами v1.0" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="400" y="50" width="200" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
