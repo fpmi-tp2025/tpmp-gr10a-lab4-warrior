@@ -1,0 +1,150 @@
+<mxfile host="app.diagrams.net" modified="2023-10-18T12:00:00.000Z" agent="Mozilla/5.0" version="27.0.6">
+  <diagram name="Page-1" id="J3KCKedbq1iABVvFpygW">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <mxCell id="start" value="" style="ellipse;whiteSpace=wrap;html=1;shape=startState;" vertex="1" parent="1">
+          <mxGeometry x="100" y="100" width="30" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="select" value="Выбор операции" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="90" width="120" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="fork" value="" style="fork;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="150" width="10" height="100" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="crud" value="Управление абитуриентами" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="200" width="120" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="reports" value="Формирование отчетов" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="200" width="120" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="create" value="Добавить абитуриента" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="300" width="120" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="read" value="Просмотр данных" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="300" width="120" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="update" value="Редактирование" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="400" width="120" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="delete" value="Удаление" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="400" width="120" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="params" value="Выбор параметров&lt;br&gt;(балл, пол, вуз)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="stats" value="Статистика:&lt;br&gt;- count(балл&gt;250)&lt;br&gt;- sum(пол=муж)&lt;br&gt;- min/max балл" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="400" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="export" value="Экспорт в PDF/Excel" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="520" width="120" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="e1" value="" style="edgeStyle=none;curved=1;rounded=0;html=1;" edge="1" parent="1" source="start" target="select">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="e2" value="" style="edgeStyle=none;curved=1;rounded=0;html=1;" edge="1" parent="1" source="select" target="fork">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="e3" value="" style="edgeStyle=none;curved=1;rounded=0;html=1;" edge="1" parent="1" source="fork" target="crud">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="e4" value="" style="edgeStyle=none;curved=1;rounded=0;html=1;" edge="1" parent="1" source="fork" target="reports">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="e5" value="" style="edgeStyle=none;curved=1;rounded=0;html=1;" edge="1" parent="1" source="crud" target="create">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="e6" value="" style="edgeStyle=none;curved=1;rounded=0;html=1;" edge="1" parent="1" source="crud" target="read">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="e7" value="" style="edgeStyle=none;curved=1;rounded=0;html=1;" edge="1" parent="1" source="crud" target="update">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="e8" value="" style="edgeStyle=none;curved=1;rounded=0;html=1;" edge="1" parent="1" source="crud" target="delete">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+  
+        <mxCell id="e9" value="" style="edgeStyle=none;curved=1;rounded=0;html=1;" edge="1" parent="1" source="reports" target="params">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="e10" value="" style="edgeStyle=none;curved=1;rounded=0;html=1;" edge="1" parent="1" source="params" target="stats">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="e11" value="" style="edgeStyle=none;curved=1;rounded=0;html=1;" edge="1" parent="1" source="stats" target="export">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="end_crud" value="" style="ellipse;whiteSpace=wrap;html=1;shape=endState;" vertex="1" parent="1">
+          <mxGeometry x="130" y="500" width="30" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="end_reports" value="" style="ellipse;whiteSpace=wrap;html=1;shape=endState;" vertex="1" parent="1">
+          <mxGeometry x="380" y="600" width="30" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="e12" value="" style="edgeStyle=none;curved=1;rounded=0;html=1;" edge="1" parent="1" source="create" target="end_crud">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="110" y="340" />
+              <mxPoint x="110" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="e13" value="" style="edgeStyle=none;curved=1;rounded=0;html=1;" edge="1" parent="1" source="read" target="end_crud">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="260" y="340" />
+              <mxPoint x="160" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="e14" value="" style="edgeStyle=none;curved=1;rounded=0;html=1;" edge="1" parent="1" source="update" target="end_crud">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="110" y="440" />
+              <mxPoint x="110" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="e15" value="" style="edgeStyle=none;curved=1;rounded=0;html=1;" edge="1" parent="1" source="delete" target="end_crud">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="260" y="440" />
+              <mxPoint x="160" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="e16" value="" style="edgeStyle=none;curved=1;rounded=0;html=1;" edge="1" parent="1" source="export" target="end_reports">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
